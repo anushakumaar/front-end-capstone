@@ -1,0 +1,61 @@
+.restaurant-story {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    padding-top: 2rem
+}
+
+.story-description {
+    grid-column: 1;
+}
+
+.restaurant-story-chefs img {
+    border-radius: 1rem;
+}
+
+.story-description h1 {
+    color: #F4CE14;
+}
+
+.story-description p {
+    padding-top: 1.5rem;
+}
+
+.restaurant-story-chefs {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* media query----------------------------------- */
+
+@media (max-width: 915px) {
+    .restaurant-story {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .restaurant-story-chefs {
+        grid-column: 1;
+        flex-direction: row;
+    }
+
+    .restaurant-story-chefs img {
+        max-width: 50%;
+    }
+
+}
+
+@media (max-width: 715px) {
+    .restaurant-story {
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .restaurant-story-chefs {
+        flex-direction: column;
+    }
+
+    .restaurant-story-chefs img {
+        max-width: 100%;
+    }
+}
